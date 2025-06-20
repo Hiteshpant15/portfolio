@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-style: italic;
+}
+header{
+    position: sticky;
+}
+.header-link a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+}
+.header-link :hover{
+    background-color: rgb(255, 208, 0);
+    z-index: 1;
+}
+.hero-page{
+    background-color: #111;
+    background-image: url(images/bg-six-shape-left-side.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    position:relative;
+}
+.devlop{
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+.my-name{
+    font-size: 108px;
+    font-weight: bolder;
+    color: #fff;
+    line-height: 96px;
+}
+.img-circle{
+    position: relative;
+    border: solid 4px yellow;
+    border-radius: 100%;
+    height: 485px;
+    width: 500px;
+}
+/* .moving-circle-1{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border:solid 2px #fff;
+    border-radius: 100%;
+    background-color: yellow;
+    left: 10%;
+    top: 10%;
+    animation: mymove 10s infinite;
+}
+.moving-circle-2{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border:solid 2px #fff;
+    border-radius: 100%;
+    background-color: yellow;
+    right: 10%;
+    bottom: 10%;
+    animation: mymove 5s infinite;} */
+    .moving-circle{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        animation: move-circle 15s infinite;
+          animation-timing-function: linear;
+    }
+@keyframes move-circle {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.my-photo{ 
+    height: 100%;
+    border:solid 4px #fff; 
+    border-radius: 100%;
+    overflow: hidden;
+}
+.my-photo img{ 
+    object-position: center;
+    object-fit: cover;
+}
