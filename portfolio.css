@@ -2,7 +2,13 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+p{
     font-style: italic;
+}
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 header{
     position: sticky;
@@ -16,8 +22,24 @@ header{
     background-color: rgb(255, 208, 0);
     z-index: 1;
 }
+.portfolio-navbar{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.navbar-icons{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    align-items:center ;
+}
 .hero-page{
-    background-color: #111;
+    /* background-color: #111; */
     background-image: url(images/bg-six-shape-left-side.png);
     background-position: left;
     background-repeat: no-repeat;
@@ -41,27 +63,6 @@ header{
     height: 485px;
     width: 500px;
 }
-/* .moving-circle-1{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border:solid 2px #fff;
-    border-radius: 100%;
-    background-color: yellow;
-    left: 10%;
-    top: 10%;
-    animation: mymove 10s infinite;
-}
-.moving-circle-2{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border:solid 2px #fff;
-    border-radius: 100%;
-    background-color: yellow;
-    right: 10%;
-    bottom: 10%;
-    animation: mymove 5s infinite;} */
     .moving-circle{
         position: absolute;
         top: 0px;
@@ -73,7 +74,6 @@ header{
     100%{
         transform: rotate(360deg);
     }
-    
 }
 .my-photo{ 
     height: 100%;
@@ -84,4 +84,60 @@ header{
 .my-photo img{ 
     object-position: center;
     object-fit: cover;
+}
+.img-background{
+    height: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.about-img{
+    border: 4px solid #fff;
+    border-radius: 100%;
+    height: 350px;
+    width: 350px;
+}
+.about-side p {
+    color:#fff;
+}
+progress{
+    width: 100%;
+}
+.range-text p{
+display: flex;
+justify-content: space-between;
+}
+.menu-bar{
+    display: none;
+}
+@media only screen and (max-width:768px){
+
+   .img-circle{
+    display: none;
+   } 
+   .portfolio-navbar
+   {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+   }
+   .portfolio-navbar li {
+    padding-bottom: 10px;
+    }
+   .cut-navbar{
+   position: absolute;
+    right: 0px;
+    top: 10px;}
+   .navbar-icons li{
+    display: none;
+   }
+   .menu-bar{
+    display: block !important;
+   }
 }
