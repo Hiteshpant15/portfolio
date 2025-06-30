@@ -3,6 +3,18 @@
     padding: 0px;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111; 
+}
 p{
     font-style: italic;
 }
@@ -64,7 +76,6 @@ header{
     font-size: 20px;
 }
 .hero-page{
-    /* background-color: #111; */
     background-image: url(images/bg-six-shape-left-side.png);
     background-position: left;
     background-repeat: no-repeat;

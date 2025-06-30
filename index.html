@@ -15,7 +15,7 @@
 </head>
 <body>
     <div style="background-color: #000 !important;">
-        <div class="hero-page">
+        <div class="hero-page" id="hero-page">
             <header>
                 <div class="container">
                     <div class="row  py-3">
@@ -25,15 +25,15 @@
                         </div>
                         <div class="col-4 col-md-7 d-flex align-items-center justify-content-end">
                             <ul class="portfolio-navbar">
-                                <li><a class="text-decoration-none text-white px-3 py-1" href="/">Home</a></li>
-                                <li><a class="text-decoration-none text-white px-3 py-1"
-                                        href="javascript:void(0)">About</a></li>
-                                <li><a class="text-decoration-none text-white px-3 py-1"
-                                        href="javascript:void(0)">Skills</a></li>
-                                <li><a class="text-decoration-none text-white px-3 py-1"
+                                <li id="home-page"><a  class="text-decoration-none text-white px-3 py-1" href="#hero-page">Home</a></li>
+                                <li ><a id="aboutus" class="text-decoration-none text-white px-3 py-1"
+                                        href="#about-me-section">About</a></li>
+                                <li ><a id="my-skills" class="text-decoration-none text-white px-3 py-1"
+                                        href="#skills">Skills</a></li>
+                                <li ><a id="my-portfolio" class="text-decoration-none text-white px-3 py-1"
                                         href="javascript:void(0)">Portfolio</a></li>
-                                <li><a class="text-decoration-none text-white px-3 py-1"
-                                        href="javascript:void(0)">Contact</a></li>
+                                <li ><a id="my-contact" class="text-decoration-none text-white px-3 py-1"
+                                        href="#mycontact">Contact</a></li>
                                 <li class="cut-navbar" onclick="cutmenu()"><a
                                         class="text-decoration-none text-white mt-3 px-2 py-1" href="javascript:void(0)"><i
                                             class="fa-solid fa-xmark fs-1"></i></a></li>
@@ -94,7 +94,7 @@
                 </div>
             </section>
         </div>
-        <section class="about-me-section">
+        <section class="about-me-section" id="about-me-section">
             <div class="container">
                 <div class="row">
                     <h2 class="text-white display-2 fw-normal">About me</h2>
@@ -136,15 +136,15 @@
                             <div class="col-md-12">
                                 <button class="px-3 my-2 py-2  mt-5 h6 me-2" style="border-radius: 50px;"><i
                                         class="fa-solid fa-file pe-1"></i>Resume</button>
-                                <button class="px-3 my-2 py-2 mt-5 h6" style="border-radius: 50px;"><i
-                                        class="fa-regular fa-id-badge pe-1"></i>Contact Me</button>
+                                <button class="px-3 my-2 py-2 mt-5 h6" style="border-radius: 50px;"> <a href="#mycontact"><i
+                                        class="fa-regular fa-id-badge pe-1"></i>Contact Me </a></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="container">
                 <div class="row range-text">
                     <h2 class="text-white display-2 fw-normal">Skills</h2>
@@ -178,16 +178,16 @@
                     </div>
                 </div>
         </section>
-        <section class="container Contact">
+        <section class="container Contact" id="mycontact">
             <div class="row">
                 <div class="col-12 col-md-7 pe-md-0">
                     <p class="contact-me">CONTACT ME</p>
                 </div>
                 <div class="col-12 col-md-4">
                         <ul class="contact-detail ps-1 ps-md-4">
-                        <li class="text-white pb-md-3 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Address =</span>Haldwani,Uttrakhand,India</li>
-                        <li class="text-white pb-md-3 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Phone no. =</span>+91 8791593403</li>
-                        <li class="text-white pb-md-2 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Email =</span>hpant245@gmail.com</li>
+                        <li class="text-white pb-md-3 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Address: </span>Haldwani,Uttrakhand,India</li>
+                        <li class="text-white pb-md-3 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Phone no.: </span>+91 8791593403</li>
+                        <li class="text-white pb-md-2 ps-md-1"><span class="fs-4"><i class="fa-solid fa-id-card"></i> Email: </span>hpant245@gmail.com</li>
                         </ul>
                 </div>
             <div class="col-md-6 sender-contact">
@@ -213,7 +213,23 @@
         function cutmenu() {
             document.querySelector(".portfolio-navbar").style.display = "none";
         }
-
+        if (window.innerWidth <= 768) {
+            document.querySelector("#home-page").addEventListener("click",function(){
+            document.querySelector(".portfolio-navbar").style.display = "none";
+            });
+         document.querySelector("#aboutus").addEventListener("click",function(){
+            document.querySelector(".portfolio-navbar").style.display = "none";
+            }); 
+            document.querySelector("#my-skills").addEventListener("click",function(){
+            document.querySelector(".portfolio-navbar").style.display = "none";
+            });
+             document.querySelector("#my-portfolio").addEventListener("click",function(){
+            document.querySelector(".portfolio-navbar").style.display = "none";
+            });
+             document.querySelector("#my-contact").addEventListener("click",function(){
+            document.querySelector(".portfolio-navbar").style.display = "none";
+            });
+        }
     </script>
 </body>
 </html>
