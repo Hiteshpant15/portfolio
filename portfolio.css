@@ -22,8 +22,11 @@ section{
     padding-top: 50px;
     padding-bottom: 50px;
 }
-header{
+.main-header{
+    background-color: #000;
+    top: 0px;
     position: sticky;
+    z-index: 1;
 }
 .header-link a{
     text-decoration: none;
@@ -79,7 +82,7 @@ header{
     background-image: url(images/bg-six-shape-left-side.png);
     background-position: left;
     background-repeat: no-repeat;
-    position:relative;
+    position:static;
 }
 .devlop{
     font-size: 36px;
